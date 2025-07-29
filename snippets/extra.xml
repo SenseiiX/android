@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="evo"
+           fetch="https://github.com/Evolution-X"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/bka" />
+
+  <remote  name="evo-codeberg"
+           fetch="https://codeberg.org/Evolution-X"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/bka" />
+
+  <!-- CodeLinaro additions -->
+  <project path="hardware/qcom-caf/sm8150/audio" name="hardware_qcom_audio" groups="qcom,msmnile" revision="bka-sm8150" remote="evo" />
+  <project path="hardware/qcom-caf/sm8150/display" name="hardware_qcom_display" groups="qcom" revision="bka-sm8150" remote="evo" />
+  <project path="hardware/qcom-caf/sm8350/display" name="hardware_qcom_display" groups="qcom" revision="lineage-22.2-caf-sm8350" remote="evo" />
+
+  <!-- External -->
+  <project path="external/cronet" name="external_cronet" groups="pdk" remote="evo" />
+
+  <!-- Hardware -->
+  <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" groups="qcom_wlan,pdk-qcom" remote="evo" />
+
+  <!-- Kernel -->
+  <project path="kernel/configs" name="kernel_configs" groups="vts,pdk" remote="evo" />
+
+  <!-- Packages -->
+  <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" groups="pdk-fs" remote="evo" />
+  <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" groups="pdk-fs,sysui-studio" remote="evo" />
+  <project path="packages/modules/IntentResolver" name="packages_modules_IntentResolver" groups="pdk,sysui-studio" remote="evo" />
+  <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="evo" />
+
+  <!-- Platform -->
+  <project path="platform_testing" name="platform_testing" groups="pdk-fs,pdk-cw-fs,cts,sysui-studio" remote="evo" />
+
+  <!-- System -->
+  <project path="system/bpf" name="system_bpf" groups="pdk" remote="evo" />
+  <project path="system/libhwbinder" name="system_libhwbinder" remote="evo" />
+  <project path="system/netd" name="system_netd" groups="pdk" remote="evo" />
+
+  <!-- Vendor -->
+  <project path="vendor/gms" name="vendor_gms" remote="evo-codeberg" clone-depth="1" />
+</manifest>
